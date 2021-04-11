@@ -3,8 +3,6 @@
 @import "variables";
 @import "mixins";
 
-@mixin forall {
-}
 
 header {
   border: 1px solid;
@@ -27,12 +25,18 @@ main {
     margin-bottom: 0;
     padding-bottom: 0;
     border: 1px solid;
+    @include mQ(624px){
+        display: inline-block;
+        width: 350px;
+        position: relative;
+        bottom: 100px;
+    }
     h1 {
       @include heading;
       text-align: left;
       margin-left: 0;
       @include mQ(360px) {
-        white-space: pre-line;
+        // white-space: pre-line;
         margin-left: 1rem;
         margin-bottom: 0;
       }
@@ -44,10 +48,21 @@ main {
       margin-left: 1.2em;
       margin-bottom: 1.4rem;
       @include mQ(360px) {
-        white-space: pre-line;
+        // white-space: pre-line;
         margin-left: 2rem;
         margin-top: 0;
       }
+    }
+  }
+  .three {
+    @include mQ(624px){
+        display: inline-block;
+        @include img(200px, 300px, "/assets/tablet/image-keyboard.jpg");
+        align-self: center;
+        text-align: center;
+        position: relative;
+        border-radius: 10px 0 0 10px;
+        // top: 60px;
     }
   }
   .two {
@@ -71,7 +86,15 @@ main {
       display: flex;
       justify-content: space-between;
     }
+    @include mQ(624px) {
+        justify-content: left;
+        position: relative;
+        top: -80px;
+        margin-bottom: 0;
+        padding-bottom: 0;
+      }
   }
+  
 
   section#sec1 {
     border: 1px solid;
@@ -80,7 +103,19 @@ main {
       @include img(200px, 300px, "/assets/mobile/image-keyboard.jpg");
       border-radius: 10px 0 0 10px;
       @include mQ(360px) {
-        width: 350px;
+        width: 250px;
+      }
+      @include mQ(400px) {
+        width: 300px;
+      }
+      @include mQ(500px) {
+        width: 370px;
+      }
+      @include mQ(624px) {
+        @include img(0, 0, "");
+        // width: 150px;
+        margin: 0;
+        pad: 0
       }
     }
     .img2 {
@@ -93,20 +128,48 @@ main {
         display: inline-block;
         margin-left: 5px;
       }
+      @include mQ(400px) {
+        width: 120px;
+      }
+      @include mQ(500px) {
+        width: 150px;
+      }
+      @include mQ(624px) {
+        @include img(130px, 200px, "/assets/tablet/image-phone-and-keyboard.jpg");
+        background-size: cover;
+        border-radius: 15px;
+      }
     }
     .img3 {
       @include img(200px, 200px, "/assets/mobile/image-glass-and-keyboard.jpg");
       border-radius: 15px;
       @include mQ(360px) {
-        width: 220px;
+        width: 150px;
         margin-left: 5px;
         display: inline-block;
       }
+      @include mQ(400px) {
+        width: 180px;
+      }
+      @include mQ(500px) {
+        width: 220px;
+      }
+      @include mQ(624px) {
+        @include img(350px, 200px, "/assets/tablet/image-glass-and-keyboard.jpg"); 
+      }
+      @include mQ(750px) {
+        @include img(480px, 200px, "/assets/desktop/image-glass-and-keyboard.jpg"); 
+        background-size: cover;
+      }
     }
+    @include mQ(900px) {
+        max-width: 720px;
+        display: inline-block;
+        float: left;
+      }
   }
 
   @mixin private {
-    white-space: pre-wrap;
     margin-left: 0;
     padding-left: 0;
   }
@@ -129,17 +192,40 @@ main {
   section.text {
     border: 2px solid;
     padding: 0;
-    margin-left: 0;
+    margin: 10px;
     h2 {
       padding: 0;
       margin: 0;
-      width: 400px;
+      @include mQ(624px) { 
+          text-align: left;
+      }
     }
     p {
       margin: 0;
       padding-top: 0;
       width: 400px;
+      @include mQ(200px) {
+        width: auto;
+      }
+      @include mQ(360px) {
+        width: auto;
+      }
+      @include mQ(624px) { 
+        text-align: left;
     }
+    } 
+      @include mQ(624px) {
+        width: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      @include mQ(900px) {
+        width: auto;
+        display: inline-block;
+        // flex-direction: column;
+        // float: right;
+      }
   }
 
   section.shared {
@@ -150,11 +236,15 @@ main {
 
     .feature {
       p {
-        margin-left: 0;
         margin-bottom: 0;
-        padding-left: 0;
       }
     }
+    @include mQ(624px) {
+        @include feature2;
+      }
+      @include mQ(900px) {
+        @include feature3;
+      }
   }
 } // end main
 
@@ -171,12 +261,3 @@ main {
      }
 
  } // end footer
-// smaller devices - mobiles
-@media screen and (min-width: 360px) {
-}
-//tablets
-@media screen and (min-width: 360px) {
-}
-//desktop
-@media screen and (min-width: 360px) {
-}
