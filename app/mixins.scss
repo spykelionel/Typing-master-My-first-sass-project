@@ -1,0 +1,79 @@
+// for buttons
+@mixin buttons {
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: $tertiary;
+  font-family: "barlow-bold";
+  font-weight: 500;
+  font-size: 1.23em;
+  color: $secondary;
+}
+
+// for h1,h2, ..
+@mixin heading {
+  font-family: "barlow-black";
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 2.5em;
+  font-weight: xx-large;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin: 0 3.375rem 1.5rem 3.75rem;
+  text-align: center;
+}
+
+// for paragraph
+@mixin paragraph {
+  color: $paraColor;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0 1.5rem 6.9375rem 1.5rem;
+}
+// for images
+@mixin img($width, $height, $url) {
+  width: $width;
+  height: $height;
+  background-image: url($url);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+}
+
+// for last section of organized preferences
+@mixin feature {
+  .feature {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    h2 {
+      @include heading();
+    }
+    p {
+      @include paragraph;
+    }
+
+    .first {
+      img {
+        margin: 20px;
+        background: $primary;
+        text-align: center;
+        padding: 15px;
+        width: fit-content;
+        border-radius: 10px;
+      }
+    }
+  }
+}
+
+@mixin mQ($width) {
+    @media screen and (min-width: $width) {
+      @content;
+    }
+}

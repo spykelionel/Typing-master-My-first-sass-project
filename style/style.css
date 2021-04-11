@@ -1,3 +1,307 @@
-body {
-  background: green;
+@font-face {
+  font-family: "barlow-bold";
+  src: url(/fonts/Barlow-Bold.ttf);
+}
+@font-face {
+  font-family: "barlow-regular";
+  src: url(/fonts/Barlow-Regular.ttf);
+}
+@font-face {
+  font-family: "barlow-medium";
+  src: url(/fonts/Barlow-Medium.ttf);
+}
+@font-face {
+  font-family: "barlow-black";
+  src: url(/fonts/Barlow-Black.ttf);
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "barlow-medium";
+  outline-style: none;
+  color: #162441;
+}
+
+@font-face {
+  font-family: "barlow-bold";
+  src: url(/fonts/Barlow-Bold.ttf);
+}
+@font-face {
+  font-family: "barlow-regular";
+  src: url(/fonts/Barlow-Regular.ttf);
+}
+@font-face {
+  font-family: "barlow-medium";
+  src: url(/fonts/Barlow-Medium.ttf);
+}
+@font-face {
+  font-family: "barlow-black";
+  src: url(/fonts/Barlow-Black.ttf);
+}
+header {
+  border: 1px solid;
+  margin: 10px;
+  display: flex;
+  justify-content: space-between;
+}
+header .logo {
+  padding: 20px;
+}
+header button.button {
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: #e8eff2;
+  font-family: "barlow-bold";
+  font-weight: 500;
+  font-size: 1.23em;
+  color: #162441;
+}
+
+main .one {
+  margin: 10px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  border: 1px solid;
+}
+main .one h1 {
+  font-family: "barlow-black";
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 2.5em;
+  font-weight: xx-large;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin: 0 3.375rem 1.5rem 3.75rem;
+  text-align: center;
+  text-align: left;
+  margin-left: 0;
+}
+@media screen and (min-width: 360px) {
+  main .one h1 {
+    white-space: pre-line;
+    margin-left: 1rem;
+    margin-bottom: 0;
+  }
+}
+main .one p {
+  color: #7b8bad;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0 1.5rem 6.9375rem 1.5rem;
+  text-align: left;
+  margin-left: 1.2em;
+  margin-bottom: 1.4rem;
+}
+@media screen and (min-width: 360px) {
+  main .one p {
+    white-space: pre-line;
+    margin-left: 2rem;
+    margin-top: 0;
+  }
+}
+main .two button {
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: #e8eff2;
+  font-family: "barlow-bold";
+  font-weight: 500;
+  font-size: 1.23em;
+  color: #162441;
+  background: #f26818;
+  color: #fff;
+}
+main .two button:hover {
+  color: #f26818;
+  background: #fff;
+  border: 1px solid #f26818;
+  cursor: pointer;
+}
+main .two h3 {
+  border: none;
+  margin: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  background: #e8eff2;
+  font-family: "barlow-bold";
+  font-weight: 500;
+  font-size: 1.23em;
+  color: #162441;
+  color: #7b8bad;
+  background: none;
+}
+@media screen and (min-width: 360px) {
+  main .two {
+    display: flex;
+    justify-content: space-between;
+  }
+}
+main section#sec1 {
+  border: 1px solid;
+  margin: 20px;
+}
+main section#sec1 .img1 {
+  width: 200px;
+  height: 300px;
+  background-image: url("/assets/mobile/image-keyboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  border-radius: 10px 0 0 10px;
+}
+@media screen and (min-width: 360px) {
+  main section#sec1 .img1 {
+    width: 350px;
+  }
+}
+main section#sec1 .img2 {
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/mobile/image-phone-and-keyboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  background-color: #f26818;
+  background-blend-mode: multiply;
+  border-radius: 0px 15px 15px 0px;
+}
+@media screen and (min-width: 360px) {
+  main section#sec1 .img2 {
+    width: 100px;
+    display: inline-block;
+    margin-left: 5px;
+  }
+}
+main section#sec1 .img3 {
+  width: 200px;
+  height: 200px;
+  background-image: url("/assets/mobile/image-glass-and-keyboard.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 20px;
+  border-radius: 15px;
+}
+@media screen and (min-width: 360px) {
+  main section#sec1 .img3 {
+    width: 220px;
+    margin-left: 5px;
+    display: inline-block;
+  }
+}
+main section h2 {
+  font-family: "barlow-black";
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 2.5em;
+  font-weight: xx-large;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin: 0 3.375rem 1.5rem 3.75rem;
+  text-align: center;
+  text-align: center;
+}
+@media screen and (min-width: 360px) {
+  main section h2 {
+    white-space: pre-wrap;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+main section p {
+  color: #7b8bad;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0 1.5rem 6.9375rem 1.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 360px) {
+  main section p {
+    white-space: pre-wrap;
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+main section.text {
+  border: 2px solid;
+  padding: 0;
+  margin-left: 0;
+}
+main section.text h2 {
+  padding: 0;
+  margin: 0;
+  width: 400px;
+}
+main section.text p {
+  margin: 0;
+  padding-top: 0;
+  width: 400px;
+}
+main section.shared {
+  border: 1px solid;
+  margin: 20px;
+  padding-left: 0;
+}
+main section.shared .feature {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main section.shared .feature h2 {
+  font-family: "barlow-black";
+  text-transform: uppercase;
+  padding: 10px;
+  font-size: 2.5em;
+  font-weight: xx-large;
+  font-weight: 800;
+  font-size: 2rem;
+  line-height: 2.25rem;
+  margin: 0 3.375rem 1.5rem 3.75rem;
+  text-align: center;
+}
+main section.shared .feature p {
+  color: #7b8bad;
+  text-align: center;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.625rem;
+  margin: 0 1.5rem 6.9375rem 1.5rem;
+}
+main section.shared .feature .first img {
+  margin: 20px;
+  background: #f26818;
+  text-align: center;
+  padding: 15px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  border-radius: 10px;
+}
+main section.shared .feature p {
+  margin-left: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+}
+
+footer {
+  margin: 20px;
+  padding: 20px;
+  text-align: center;
+}
+footer h4 span {
+  color: #7b8bad;
+  padding: 5px;
 }
